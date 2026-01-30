@@ -1,6 +1,6 @@
 # Laravel PayTR Paketi
 
-Laravel 11+ projeleri için geliştirilmiş, kullanımı kolay ve güvenli PayTR **iFrame API** entegrasyon paketi.
+Laravel 12+ projeleri için geliştirilmiş, kullanımı kolay ve güvenli PayTR **iFrame API** entegrasyon paketi.
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/hakanispirli/laravel-paytr.svg?style=flat-square)](https://packagist.org/packages/hakanispirli/laravel-paytr)
 [![License](https://img.shields.io/packagist/l/hakanispirli/laravel-paytr.svg?style=flat-square)](https://packagist.org/packages/hakanispirli/laravel-paytr)
