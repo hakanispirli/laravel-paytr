@@ -21,7 +21,7 @@ Laravel 11+ projeleri için geliştirilmiş, kullanımı kolay ve güvenli PayTR
    ```env
    PAYTR_MERCHANT_ID=magaza_no
    PAYTR_MERCHANT_KEY=magaza_anahtari
-   PAYTR_MERCHANT_SALT=magaza_tuz
+   PAYTR_MERCHANT_SALT=magaza_salt
    PAYTR_TEST_MODE=true
    ```
 
@@ -53,16 +53,6 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withExceptions(function (Exceptions $exceptions) {
         //
     })->create();
-```
-
-### Laravel 11 (`bootstrap/app.php`):
-
-```php
-->withMiddleware(function (Middleware $middleware) {
-    $middleware->validateCsrfTokens(except: [
-        'payment/paytr/*',
-    ]);
-})
 ```
 
 ## ÖNEMLİ: Callback URL Ayarı
@@ -178,28 +168,6 @@ public function boot(): void
 | **Input Validation** | Email, telefon, IP adresi, tutar doğrulaması |
 | **Timing-Safe Hash** | `hash_equals()` ile timing attack koruması |
 | **SSL Verification** | HTTPS zorunluluğu |
-
-## Klasör Yapısı
-
-```
-src/
-├── Contracts/
-│   └── PaytrInterface.php
-├── Events/
-│   ├── PaytrPaymentSuccess.php
-│   └── PaytrPaymentFailed.php
-├── Facades/
-│   └── Paytr.php
-├── Http/
-│   └── Controllers/
-│       └── PaytrController.php
-├── Providers/
-│   └── PaytrServiceProvider.php
-├── Services/
-│   └── PaytrService.php
-└── Support/
-    └── Sanitizer.php
-```
 
 ## Gereksinimler
 
